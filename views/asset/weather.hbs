@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {{>header}}
+</head>
+<body>
+{{>navbar}}
+
+  <div class="container-fluid main_header">
+      <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+           
+          <div class="main_content">
+              <form class="temp">
+                  <input type="text" id="cityN" placeholder="enter your city" autocomplete="off">
+                  <input type ="submit" value="search" id="submitbtn">
+            </form>
+          </div>
+
+        <div class="info">
+            <div class="top">
+                <p id="day">tuesday</p>
+                <p id="data">22may</p>
+            </div>
+
+            <div class="main">
+                <p id="city">get output</p>
+                <div class="middle">
+                    <p id="t"><span>0</span><sup>o</sup>C</p>
+                    <p id="t_status"><i class="fas fa-cloud"></i></p>
+                </div>
+            </div>
+        </div>
+
+            </div>
+          </div>
+      </div>
+
+
+ {{>footer}}
+
+
+ <script src="js/main.js"></script>
+ <script>
+
+     const getcurDay=()=>{
+
+    let weekday= new Array(7)
+    weekday[0]="sunday";
+    weekday[1]="mon";
+    weekday[2]="tus";
+    weekday[3]="wed";
+    weekday[4]="thru";
+    weekday[5]="fri";
+    weekday[6]="sat";
+
+    let curtime= new Date()
+    
+     
+    days= weekday[curtime.getDay()]
+     let day= document.getElementById("day")
+    day.innerText= days
+}
+
+getcurDay()
+ </script>
+</body>
+</html> 
